@@ -1,0 +1,40 @@
+(defn "name of function" ["any parameter"] "codes to run")
+
+EXAMPLE:
+
+(defn print-cartesian-line [para lst1] (if (not (empty? lst1)) (do (println para (first lst1)) (cartesian-line para (rest lst1)))))
+
+	(cartesian-line 'str (1 2 3))
+	=>'str 1
+	=>'str 2
+	=>'str 3
+
+(defn print-cartesian [lst1 lst2] (if (not (empty? lst1)) (do (print-cartesian-line (first lst1) lst2) (print-cartesian (rest lst1) lst2))))
+
+	(cartesian-line (0 4 8) (1 2 3))
+	=> 0 1
+	=> 0 2
+	=> 0 3
+	=> 4 1
+	=> 4 2
+	=> 4 3
+	=> 8 1
+	=> 8 2
+	=> 8 3
+
+HW:
+	
+(defn power-set [set] ???)
+	
+	(power-set ())
+	=> empty
+	
+	(power-set (1))
+	=> empty
+	=> 1
+	
+	(power-set (1 2))
+	=> empty
+	=> 1
+	=> 2
+	=> 1 2
