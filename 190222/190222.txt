@@ -4,14 +4,14 @@ EXAMPLE:
 
 (defn print-cartesian-line [para lst1] (if (not (empty? lst1)) (do (println para (first lst1)) (cartesian-line para (rest lst1)))))
 
-	(cartesian-line 'str (1 2 3))
-	=>'str 1
-	=>'str 2
-	=>'str 3
+	(print-cartesian-line 'str (1 2 3))
+	=>str 1
+	=>str 2
+	=>str 3
 
 (defn print-cartesian [lst1 lst2] (if (not (empty? lst1)) (do (print-cartesian-line (first lst1) lst2) (print-cartesian (rest lst1) lst2))))
 
-	(cartesian-line (0 4 8) (1 2 3))
+	(print-cartesian (0 4 8) (1 2 3))
 	=> 0 1
 	=> 0 2
 	=> 0 3
