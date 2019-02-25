@@ -1,0 +1,38 @@
+big Omega notation: describes the lower bound (best case / slowest possible) scenario
+big Theta notation: describes the tight bound scenario (b/w worst and best cases)
+Big O notation: describes the upper bound (worst case / fastest possible) scenario
+
+small size inputs are negligible in algorithms
+the exact size of inputs that are significant in algorithms is up to resources (CPU/memory)
+
+constant time complexity: (println ...) constant function
+linear time complexity: (+ ...) (- ...) (* ...) arithmetic operations
+cubic time complexity: matrix multiplication (the number of operations = "size of row&column"^3)
+	e.g. computer 3D graphics utilises the 4x4 matrix multiplication
+exponential time complexity: listing a powerset
+
+	Find nth element from a list:
+	(defn get-from-list [lst n] (if (= n 0) (first lst) (get-from-list (rest lst) (- n 1))))
+
+		(get-from-list (1 2 3 4 5) 0)
+		=> 1
+		(get-from-list (7 6 1 8 2) 4)
+		=> 2
+
+		
+time complexity examples
+
+	rest function of LISP: O(n), Omega(1)
+	factorial without multiplications: the operations grows as large as the size of input => O(n), Omega(n) => Theta(n)
+	counting the number of digits: O(n), Omega(log n)
+	=> factorial with multiplications: Theta(n * log n)
+	println function: Theta(n)/Theta(log n)
+	(list): Theta(1)
+	(list?): Theta(1)
+	(vector): Theta(n)
+	get/count function: Theta(1)
+	
+HW:	Fibonacci sequence
+	(defn fib [n] (if ) ... (fib ...))
+	its complexity
+	more efficient algorithm for fib than F(n) = F(n-1) + F(n-2)?

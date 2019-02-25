@@ -2,7 +2,7 @@
 
 EXAMPLE:
 
-(defn print-cartesian-line [para lst1] (if (not (empty? lst1)) (do (println para (first lst1)) (cartesian-line para (rest lst1)))))
+(defn print-cartesian-line [para lst1] (if (not (empty? lst1)) (do (println para (first lst1)) (print-cartesian-line para (rest lst1)))))
 
 	(print-cartesian-line 'str (1 2 3))
 	=>str 1
